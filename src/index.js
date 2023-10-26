@@ -1,7 +1,19 @@
 require('dotenv').config()
 const express = require('express')
+const cors = require('cors')
 
 const app = express()
+
+app.use(cors())
+
+// app.use(cors({
+// 	origin: 'https://cubos.academy/'
+// }))
+
+// app.use(cors({
+// 	origin: ['https://cubos.academy/', 'https://google.com/']
+// }))
+
 
 app.use(express.json())
 
